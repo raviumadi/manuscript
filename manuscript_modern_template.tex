@@ -1,0 +1,194 @@
+% ----------------------------------------------------------------
+% MANUSCRIPT MODERN TEMPLATE - DOCUMENTATION AND EXAMPLE USAGE
+% ----------------------------------------------------------------
+\documentclass{manuscript_modern}
+
+% ------------------- Packages -------------------
+\usepackage{lipsum}         % Generates filler text
+\usepackage{pgfplots}      % Required for TikZ axis plotting
+\pgfplotsset{compat=1.18}  % Ensures compatibility
+\usepackage{mwe}       % Only for the placeholder image
+
+% ------------------- Bibliography -------------------
+% Default bibliography using biblatex is assumed. You can override:
+% \usepackage[style=nature]{biblatex}
+ \addbibresource{ref.bib}
+
+% ------------------- Graphics Path -------------------
+% Add your image directories (must end with '/')
+% \graphicspath{{figures/} {img/}}
+
+% ------------------- Metadata -------------------
+\title{A Modern Template for Scientific Manuscripts}
+\setheaderlabel{Presubmission Draft}  % Appears in page header
+\date{2 June 2025}
+
+% ------------------- Optional Title Page -------------------
+% If using a standalone front page (for submissions):
+% \includefrontpage
+
+% ------------------- Anonymous Mode -------------------
+% Use for double-blind review: suppresses author info in title block
+% Author data still appears on optional front page if enabled
+% \anonymousauthor
+
+% ------------------- Line Numbers -------------------
+% Enable line numbering with:
+\linenumbersOn
+% Disable with: \linenumbersOff
+
+% ------------------- Colour Scheme -------------------
+% Included predefined colors:
+% manuscriptblue, manuscriptmaroon, manuscriptteal,
+% manuscriptbrown, manuscriptgrey, manuscriptgolden,
+% manuscriptmagenta, manuscriptplum
+
+% Customise them:
+% \settitlecolor{manuscriptteal}       % Title + cite link color
+% \setmaintextcolor{manuscriptblue}    % Body text
+% \setheadercolor{manuscriptgolden}    % Page headers + abstract box
+% \setcaptioncolor{manuscriptbrown}    % Captions and abstract label
+% \setkeywordscolor{manuscriptplum}    % Keywords list below abstract
+
+% ------------------- Author and Affiliation -------------------
+% Usage: \addauthor[*]{Name}{ORCID}{AffilID}{email}
+% Optional * = corresponding author
+\addauthor[*]{Ravi Umadi}{0000-0003-XXXX-XXXX}{1}{ravi@example.com}
+\addauthor{Alex Flaming}{}{2}{alex@example.edu}
+\addauthor{Billy Bob}{}{1,3}{billy@hill.com}
+
+% Usage: \addaffiliation{ID}{Full Institute Name}
+\addaffiliation{1}{Institute of Applied Ideas, Munich, Germany}
+\addaffiliation{2}{School of Modern Physics, Notinghill University, UK}
+\addaffiliation{3}{Hill Ranch University, Valley Town, Georgia, USA}
+
+% ------------------- Abstract -------------------
+\setabstract{
+	This document demonstrates the usage of the \texttt{manuscript\_modern} class for clean, readable, and easily customizable scientific manuscripts. Refer to the \texttt{readme} file for more detailed instrucitons. Also see the comments in the preamble of this template for quick usage instruction.
+}
+
+% ------------------- Keywords -------------------
+\setkeywords{template, latex, manuscript, modern, design}
+
+% ------------------- Non-Technical Summary -------------------
+\setsummary{
+	This class is ideal for preparing preprints, journal submissions, or open-access archives like arXiv and bioRxiv. All colours, section fonts, caption formats, and metadata are customisable.
+}
+
+% ------------------- Metadata Block -------------------
+\setmanuscriptinfo{Version: Draft 1\\Last updated: June 2, 2025\\Git repo: \url{git@github.com:raviumadi/manuscript.git}}
+
+% ------------------- Personal Pronouns -------------------
+% \we{} \We{} \our{} \Our{} automatically resolve to singular or plural
+% depending on how many authors are defined
+
+\begin{document}
+	
+	% ------------------- Title Block -------------------
+	\maketitleblock
+	
+	% ------------------- Main Content -------------------
+	\section{Introduction}
+	\begin{maintext}
+		Welcome to the \texttt{manuscript\_modern} class. This document serves both as a guide and a starting point for your own scientific article. You will find clear structure, elegant design, and easy-to-customise commands for layout, colour, and structure.
+		
+		\We{} developed this class to simplify scientific writing while ensuring the output is beautiful and journal-ready.
+		
+		\begin{itemize}
+			\item Clean, readable typography with Lato-style fonts
+			\item Section headings and colour macros
+			\item Support for anonymous submissions and line numbering
+			\item Author macros with ORCID and affiliation linking
+			\item Abstract and summary boxes for clarity
+		\end{itemize}
+		
+		You can easily add custom commands or packages without breaking layout.
+	
+		% ------------------- Summary Block -------------------
+	\begin{summaryblock}
+	\end{summaryblock}
+	
+	% ------------------- Methods -------------------
+	\section{Methods}
+
+		All main sections should be wrapped in \texttt{maintext} environment, which ensures consistent margins and vertical spacing. You can include subsections and standard environments like \texttt{itemize}, \texttt{enumerate}, and \texttt{equation} without extra setup.
+		
+		\subsection{Table Example}
+		Class provides \texttt{tabularx} with \texttt{booktabs} for modern table styling. Use the figure environment as usual to includegraphics.
+		
+		\lipsum[4]
+		
+		\begin{table}[ht]
+			\centering
+			\caption{Sample table with fixed column widths}
+			\begin{tabularx}{0.9\textwidth}{lXr}
+				\toprule
+				\textbf{Code} & \textbf{Description} & \textbf{Score} \\
+				\midrule
+				A1 & Prototype tested on synthetic data & 8.4 \\
+				B2 & Added real-world test modules & 9.2 \\
+				C3 & Final release and review & 9.7 \\
+				\bottomrule
+			\end{tabularx}
+		\end{table}
+		
+		\lipsum[2]
+		\subsection{Figure Example}
+		Use TikZ and pgfplots for inline mathematical plots. Class provides \texttt{pgfplots} and sets compatible version:
+		
+		
+		\begin{figure}[ht]
+			\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=0.8\linewidth,
+					height=6cm,
+					grid=both,
+					xlabel={$x$}, ylabel={$f(x) = e^{0.5x}$},
+					domain=0:10, samples=100,
+					axis lines=left
+					]
+					\addplot[manuscriptteal, thick]{exp(0.5*x)};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{Example exponential function plotted using \texttt{pgfplots}.}
+		\end{figure}
+
+	
+	% ------------------- Results -------------------
+	\section{Results}
+
+		Results are typically supported by figures and tables. You may cite sources using biblatex: \cite{grinsteinSteeredResponsePower2024, wajidDesignAnalysisAir2016}. The bibliography will appear automatically at the end.
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.7\linewidth]{example-image}
+			\caption{Example placeholder image. Replace with your actual figure.}
+			\label{fig:example}
+		\end{figure}
+
+	
+	% ------------------- Discussion -------------------
+	\section{Discussion}
+
+		Discuss findings here. The environment will maintain paragraph spacing and body colour set with \verb|\setmaintextcolor|.
+
+	
+	% ------------------- Conclusion -------------------
+	\section{Conclusion}
+
+		The \texttt{manuscript\_modern} class offers a complete system for typesetting professional manuscripts, especially for scientific and preprint use.
+	\end{maintext}
+	
+
+	
+	% ------------------- Footer Manuscript Info -------------------
+	\greyhrule
+	\begin{manuscriptinfo}
+	\end{manuscriptinfo}
+	
+	% ------------------- Bibliography -------------------
+	\greyhrule
+	\printbibliography
+	
+\end{document}
