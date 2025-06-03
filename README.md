@@ -18,6 +18,12 @@
 
 ---
 
+<p align="center">
+  <img src="fig/first_draft_page.png" alt="Example Output" width="600">
+</p>
+
+---
+
 ## 🛠️ Getting Started
 
 ### 1. Set up your document
