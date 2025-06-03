@@ -14,7 +14,6 @@
 - Embedded abstract, keywords, and summary block
 - Customisable reference and caption styles
 - Automated personal pronouns for single/multiple authors
-- Git-ready and arXiv-compliant
 
 ---
 
