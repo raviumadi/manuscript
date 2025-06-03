@@ -224,13 +224,13 @@ To update, just overwrite the `.cls` and run `mktexlsr` again.
 
 ## 📄 License
 
-MIT License. You are free to use, modify, and distribute this class with attribution.
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 
 ---
 
 ## 💬 Feedback / Contributions
 
-Feel free to fork and contribute on [GitHub](https://github.com/example/repo) or raise an issue. If you use the template in a published work, I’d love to know!
+Feel free to fork and contribute on [GitHub](git@github.com:raviumadi/manuscript.git) or raise an issue. If you use the template in a published/preprint work, I’d love to know!
 
 ---
 
