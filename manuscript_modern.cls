@@ -1,7 +1,7 @@
 % manuscript_modern.cls -- Clean Modern Manuscript Format (updated with author hiding feature)
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{manuscript_modern}[2025/06/03 Clean Modern Manuscript Format v2]
+\ProvidesClass{manuscript_modern}[2025/06/03 Clean Modern Manuscript Format v1]
 
 \LoadClass[9pt,a4paper]{article}
 
