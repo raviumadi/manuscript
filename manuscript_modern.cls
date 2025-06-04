@@ -8,7 +8,6 @@
 % ---------------------- Packages ----------------------
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage{datetime2}
 \RequirePackage{lmodern}
 \RequirePackage[a4paper,margin=1.25in]{geometry}
 \RequirePackage{graphicx}
@@ -39,6 +38,8 @@
 \definecolor{manuscriptgolden}{HTML}{A68B00}
 \definecolor{manuscriptmagenta}{HTML}{C71585}
 \definecolor{manuscriptplum}{HTML}{7E3F8F}
+
+
 
 % ---------------------- Color Macros ----------------------
 \newcommand{\@maintextcolor}{manuscriptblue}
