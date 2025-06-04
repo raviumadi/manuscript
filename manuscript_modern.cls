@@ -8,6 +8,7 @@
 % ---------------------- Packages ----------------------
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{datetime2}
 \RequirePackage{lmodern}
 \RequirePackage[a4paper,margin=1.25in]{geometry}
 \RequirePackage{graphicx}
